@@ -1,0 +1,25 @@
+(medgs) C:\Users\jembi\medgs-gem>python main.py --input_path ./input_data/trainmasks/4.nii.gz --output_path ./output/patient_004_20260604_masked.obj --iterations 5000
+Loading data from ./input_data/trainmasks/4.nii.gz...
+[Dataset] Physical Voxel Spacing (Z, X, Y) in mm: (3.600006, 1.125, 1.125)
+C:\Users\jembi\anaconda3\envs\medgs\lib\site-packages\torch\cuda\__init__.py:230: UserWarning:
+NVIDIA GeForce RTX 5070 Ti Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Ti Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Initializing 50000 Gaussians...
+Starting optimization for 5000 iterations...
+Training MedGS: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [01:23<00:00, 59.58it/s, Loss=0.00404, PSNR=21.14dB]
+
+Optimization complete. Exporting assets...
+Baking MedGS model to ./output/patient_004_20260604_masked.ply with 80 temporal slices...
+Saved 33840 Gaussians to ./output/patient_004_20260604_masked.ply
+
+[Mesh Extraction] Rendering 80 dense 2D slices...
+[Mesh Extraction] Stack complete. Running Marching Cubes...
+[Mesh Extraction] Applying Z-axis stretch factor: 3.2000
+[Mesh Extraction] Success! Saved physically scaled mesh to ./output/patient_004_20260604_masked.obj
+
+
+
+python main.py --input_path ./input_data/trainextracts/4.nii.gz --output_path ./output/patient_004_20260606_mext.obj --iterations 5000
