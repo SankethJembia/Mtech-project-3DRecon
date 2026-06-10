@@ -28,7 +28,7 @@ def train(args):
     camera = SimpleCamera(H, W)
     bg_color = torch.zeros(3, device="cuda")
 
-    initial_points = 50_000 
+    initial_points = 30_000 
     model = MedGSModel(num_points=initial_points, poly_degree=2).cuda()
     model.create_from_pcd(num_pts=initial_points)
 

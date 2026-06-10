@@ -1,0 +1,163 @@
+NON HEALTHY SUBJECT
+
+
+Liver Masks
+
+python main.py --input_path ./input_data/nonhealthsub/trainmasks/4.nii.gz --output_path ./output/nonhealthy/patient_004_202606010_masked5000.obj --iterations 5000
+
+logs
+
+-------------------------------------------------------------------------------------------------------------------
+
+(medgs) C:\Users\jembi\Mtech-project-3DRecon>python main.py --input_path ./input_data/nonhealthsub/trainmasks/4.nii.gz --output_path ./output/nonhealthy/patient_004_202606010_masked5000.obj --iterations 5000
+Loading data from ./input_data/nonhealthsub/trainmasks/4.nii.gz...
+[Dataset] Physical Voxel Spacing (Z, X, Y) in mm: (3.600006, 1.125, 1.125)
+C:\Users\jembi\anaconda3\envs\medgs\lib\site-packages\torch\cuda\__init__.py:230: UserWarning:
+NVIDIA GeForce RTX 5070 Ti Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Ti Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Initializing 30000 Gaussians...
+Starting optimization for 5000 iterations...
+Training MedGS: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [01:01<00:00, 81.67it/s, Loss=0.00555, PSNR=18.75dB]
+
+Optimization complete. Exporting assets...
+Baking MedGS model to ./output/nonhealthy/patient_004_202606010_masked5000.ply with 80 temporal slices...
+Saved 22720 Gaussians to ./output/nonhealthy/patient_004_202606010_masked5000.ply
+
+[Mesh Extraction] Rendering 80 dense 2D slices...
+[Mesh Extraction] Stack complete. Running Marching Cubes...
+[Mesh Extraction] Applying Z-axis stretch factor: 3.2000
+[Mesh Extraction] Success! Saved physically scaled mesh to ./output/nonhealthy/patient_004_202606010_masked5000.obj
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+PSNR range 
+
+16 to 21
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Liver Masks + Tissue data
+
+python main.py --input_path ./input_data/nonhealthsub/trainextracts/4.nii.gz --output_path ./output/nonhealthy/masks+tissuedata/patient_004_202606010_masked5000td.obj --iterations 5000
+
+logs 
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+(medgs) C:\Users\jembi\Mtech-project-3DRecon>python main.py --input_path ./input_data/nonhealthsub/trainextracts/4.nii.gz --output_path ./output/nonhealthy/masks+tissuedata/patient_004_202606010_masked5000td.obj --iterations 5000
+Loading data from ./input_data/nonhealthsub/trainextracts/4.nii.gz...
+[Dataset] Physical Voxel Spacing (Z, X, Y) in mm: (3.600006, 1.125, 1.125)
+C:\Users\jembi\anaconda3\envs\medgs\lib\site-packages\torch\cuda\__init__.py:230: UserWarning:
+NVIDIA GeForce RTX 5070 Ti Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Ti Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Initializing 30000 Gaussians...
+Starting optimization for 5000 iterations...
+Training MedGS: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:59<00:00, 83.46it/s, Loss=0.00289, PSNR=26.32dB]
+
+Optimization complete. Exporting assets...
+Baking MedGS model to ./output/nonhealthy/masks+tissuedata/patient_004_202606010_masked5000td.ply with 80 temporal slices...
+Saved 23120 Gaussians to ./output/nonhealthy/masks+tissuedata/patient_004_202606010_masked5000td.ply
+
+[Mesh Extraction] Rendering 80 dense 2D slices...
+[Mesh Extraction] Stack complete. Running Marching Cubes...
+[Mesh Extraction] Applying Z-axis stretch factor: 3.2000
+[Mesh Extraction] Success! Saved physically scaled mesh to ./output/nonhealthy/masks+tissuedata/patient_004_202606010_masked5000td.obj
+
+-------------------------------------------------------------------------------------------------------------------
+
+PSNR range 
+
+18 to 26
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+HEALTHY SUBJECT
+
+Liver Masks
+
+python main.py --input_path ./input_data/healthySub/trainmasks/1.nii.gz --output_path ./output/healthy/only_masks/patient_001_202606010_masked5000.obj --iterations 5000
+
+logs
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+(medgs) C:\Users\jembi\Mtech-project-3DRecon>python main.py --input_path ./input_data/healthySub/trainmasks/1.nii.gz --output_path ./output/healthy/only_masks/patient_001_202606010_masked5000.obj --iterations 5000
+Loading data from ./input_data/healthySub/trainmasks/1.nii.gz...
+[Dataset] Physical Voxel Spacing (Z, X, Y) in mm: (3.6000001, 1.3125, 1.3125)
+C:\Users\jembi\anaconda3\envs\medgs\lib\site-packages\torch\cuda\__init__.py:230: UserWarning:
+NVIDIA GeForce RTX 5070 Ti Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Ti Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Initializing 30000 Gaussians...
+Starting optimization for 5000 iterations...
+Training MedGS: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [01:02<00:00, 79.55it/s, Loss=0.00344, PSNR=19.92dB]
+
+Optimization complete. Exporting assets...
+Baking MedGS model to ./output/healthy/only_masks/patient_001_202606010_masked5000.ply with 72 temporal slices...
+Saved 17424 Gaussians to ./output/healthy/only_masks/patient_001_202606010_masked5000.ply
+
+[Mesh Extraction] Rendering 72 dense 2D slices...
+[Mesh Extraction] Stack complete. Running Marching Cubes...
+[Mesh Extraction] Applying Z-axis stretch factor: 2.7429
+[Mesh Extraction] Success! Saved physically scaled mesh to ./output/healthy/only_masks/patient_001_202606010_masked5000.obj
+
+-------------------------------------------------------------------------------------------------------------------
+
+PSNR range 
+
+18 to 22
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Liver Masks + Tissue data
+python main.py --input_path ./input_data/healthySub/trainextracts/1.nii.gz --output_path ./output/healthy/masks+tissuedata/patient_001_202606010_masked5000td.obj --iterations 5000
+
+
+logs 
+
+-------------------------------------------------------------------------------------------------------------------
+
+(medgs) C:\Users\jembi\Mtech-project-3DRecon>python main.py --input_path ./input_data/healthySub/trainextracts/1.nii.gz --output_path ./output/healthy/masks+tissuedata/patient_001_202606010_masked5000td.obj --iterations 5000
+Loading data from ./input_data/healthySub/trainextracts/1.nii.gz...
+[Dataset] Physical Voxel Spacing (Z, X, Y) in mm: (3.6000001, 1.3125, 1.3125)
+C:\Users\jembi\anaconda3\envs\medgs\lib\site-packages\torch\cuda\__init__.py:230: UserWarning:
+NVIDIA GeForce RTX 5070 Ti Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Ti Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Initializing 30000 Gaussians...
+Starting optimization for 5000 iterations...
+Training MedGS: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [01:01<00:00, 80.81it/s, Loss=0.00220, PSNR=26.57dB]
+
+Optimization complete. Exporting assets...
+Baking MedGS model to ./output/healthy/masks+tissuedata/patient_001_202606010_masked5000td.ply with 72 temporal slices...
+Saved 16272 Gaussians to ./output/healthy/masks+tissuedata/patient_001_202606010_masked5000td.ply
+
+[Mesh Extraction] Rendering 72 dense 2D slices...
+[Mesh Extraction] Stack complete. Running Marching Cubes...
+[Mesh Extraction] Applying Z-axis stretch factor: 2.7429
+[Mesh Extraction] Success! Saved physically scaled mesh to ./output/healthy/masks+tissuedata/patient_001_202606010_masked5000td.obj
+
+-------------------------------------------------------------------------------------------------------------------
+
+PSNR range 
+
+20 to 29
+
+-------------------------------------------------------------------------------------------------------------------
+
